@@ -1,6 +1,7 @@
 package com.mobidroid.androidmtl;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 public class AndroidMontrealAppActivity extends Activity {
@@ -9,5 +10,9 @@ public class AndroidMontrealAppActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        Intent i = new Intent(this, AndroidMtlSetting.class);
+        startActivity(i);
+        
+        
     }
 }

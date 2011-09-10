@@ -2,4 +2,8 @@
 <resources>
     <string name="hello">Hello World, AndroidMontrealAppActivity!</string>
     <string name="app_name">AndroidMontrealApp</string>
+    <string name="beginner">Beginner</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="expert">Expert</string>
+    <string name="settingheader">Programming Skill Level</string>
 </resources>
