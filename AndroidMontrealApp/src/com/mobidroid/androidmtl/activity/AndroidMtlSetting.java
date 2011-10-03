@@ -1,10 +1,11 @@
-package com.mobidroid.androidmtl;
+package com.mobidroid.androidmtl.activity;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+import com.mobidroid.androidmtl.R;
 
 public class AndroidMtlSetting extends Activity {
 
