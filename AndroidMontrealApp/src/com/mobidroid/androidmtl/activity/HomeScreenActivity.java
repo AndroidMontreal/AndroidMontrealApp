@@ -15,32 +15,53 @@ public class HomeScreenActivity extends Activity {
 		setContentView(R.layout.activity_home);
 	}
 
+	/**
+	 * Suggest a topic for the next meeting
+	 */
 	public void onSuggestClick(View v) {
 		startActivity(new Intent(this, HomeScreenActivity.class));
 	}
 
+	/*
+	 * Find us on the map
+	 */
 	public void onMapClick(View v) {
 		startActivity(new Intent(this, HomeScreenActivity.class));
 	}
 
+	/*
+	 * Contact us
+	 */
 	public void onContactClick(View v) {
 		startActivity(new Intent(this, HomeScreenActivity.class));
 	}
 
+	/*
+	 * View events (calendar?)
+	 */
 	public void onEventClick(View v) {
 		startActivity(new Intent(this, HomeScreenActivity.class));
 	}
 
+	/*
+	 * News feed from FrAndroid
+	 */
 	public void onNewsClick(View v) {
 		startActivity(new Intent(this, HomeScreenActivity.class));
 	}
 
+	/*
+	 * About Android Montreal Group
+	 */
 	public void onAboutClick(View v) {
-		startActivity(new Intent(this, HomeScreenActivity.class));
+		startActivity(new Intent(this, AndroidMtlSetting.class));
 	}
 
-	public void onFacebookClick(View v) {
-		startActivity(new Intent(this, HomeScreenActivity.class));
+	/*
+	 * Settings (there is no button currently, we have too many buttons)
+	 */
+	public void onSettingsClick(View v) {
+		startActivity(new Intent(this, AndroidMtlSetting.class));
 	}
 
 }

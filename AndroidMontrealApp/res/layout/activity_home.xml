@@ -8,30 +8,46 @@
 	the specific language governing permissions and limitations under the License. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:id="@+id/home_root" android:orientation="vertical"
-	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	android:background="#ffffff" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<TextView android:id="@+id/logoplaceholder"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:textSize="25.5sp" android:text="Android Montreal logo placeholder" />
 
 
 	<TableLayout android:id="@+id/tableLayout1"
-		android:layout_width="wrap_content" android:layout_height="match_parent">
+		android:layout_width="match_parent" android:layout_height="match_parent"
+		android:stretchColumns="1">
 		<TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content"
 			android:layout_height="wrap_content">
 			<Button android:id="@+id/home_btn_suggest" style="@style/HomeButton"
 				android:onClick="onSuggestClick" android:drawableTop="@drawable/home_btn_starred" />
 			<Button android:id="@+id/home_btn_map" style="@style/HomeButton"
 				android:onClick="onMapClick" android:drawableTop="@drawable/home_btn_starred" />
+		</TableRow>
+		<TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
 			<Button android:id="@+id/home_btn_contact" style="@style/HomeButton"
 				android:onClick="onContactClick" android:drawableTop="@drawable/home_btn_starred" />
-			</TableRow>
-			<TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content"
-			android:layout_height="wrap_content">
 			<Button android:id="@+id/home_btn_events" style="@style/HomeButton"
 				android:onClick="onEventsClick" android:drawableTop="@drawable/home_btn_starred" />
+		</TableRow>
+		<TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
 			<Button android:id="@+id/home_btn_news" style="@style/HomeButton"
 				android:onClick="onNewsClick" android:drawableTop="@drawable/home_btn_starred" />
 			<Button android:id="@+id/home_btn_about" style="@style/HomeButton"
 				android:onClick="onAboutClick" android:drawableTop="@drawable/home_btn_starred" />
+
 		</TableRow>
-		
+		<TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+
+			<TextView android:id="@+id/tickerplaceholder"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:text="Whats new ticker placeholder (?)" />
+		</TableRow>
 
 	</TableLayout>
 
