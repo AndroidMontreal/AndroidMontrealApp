@@ -18,5 +18,10 @@
             </intent-filter>
         </activity>
 
-    </application>
+
+		<activity android:name=".AndroidMtlSetting" android:label="@string/app_name">
+		</activity>
+	</application>
+
+
 </manifest>

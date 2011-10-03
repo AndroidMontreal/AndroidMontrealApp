@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<ImageView android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:scaleType="centerCrop"
+		android:src="@drawable/notman_house_09" />
+
+
+
+	<TextView android:layout_height="wrap_content" android:id="@+id/header"
+		android:layout_width="fill_parent" android:text="@string/settingheader"
+		android:gravity="center" />
+
+	<RadioGroup android:id="@+id/setting" android:layout_width="fill_parent"
+		android:layout_below="@id/header" android:background="#33333333"
+		android:padding="5dp" android:layout_height="wrap_content">
+
+		<RadioButton android:text="@string/beginner" android:id="@+id/radioButton1"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></RadioButton>
+
+		<RadioButton android:text="@string/intermediate"
+			android:id="@+id/radioButton2" android:layout_width="wrap_content"
+			android:layout_height="wrap_content"></RadioButton>
+
+		<RadioButton android:text="@string/expert" android:id="@+id/radioButton3"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></RadioButton>
+
+	</RadioGroup>
+</RelativeLayout>
