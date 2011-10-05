@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/splash_layout"
+	android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF"
+    >
+	<ImageView
+		android:src="@drawable/splash_bug"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="top|center_horizontal"
+		/>
+
+	<TextView 
+		android:id="@+id/splash_title"
+		android:layout_marginTop="5px"
+		android:text="PlaceHolder vX.Y.Z 123"
+		android:textColor="#000"
+		android:textSize="20sp"
+		android:textStyle="bold"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+	/>		
+<!-- TODO: Check if we have "more" to say here.
+	<TextView
+		android:id="@+id/splash_subtext"
+		android:layout_marginTop="5px"
+		android:textColor="#000"
+		android:textSize="14sp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+	/>
+-->
+
+<!--  Keeping this around as example for picking language from the splash screen... 
+TODO: See if we really want to keep this.
+	<LinearLayout android:orientation="horizontal" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	>
+
+		<LinearLayout android:orientation="vertical"
+			android:layout_weight="1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		>
+			<Spinner android:id="@+id/spinner_language"
+				android:layout_marginTop="10px"
+				android:layout_marginLeft="15px"
+				android:layout_marginRight="15px"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+			 	android:drawSelectorOnTop="true"
+				android:prompt="@string/spinner_language_prompt"
+			/>
+			<Spinner android:id="@+id/spinner_cities"
+				android:layout_marginTop="10px"
+				android:layout_marginLeft="15px"
+				android:layout_marginRight="15px"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+			 	android:drawSelectorOnTop="true"
+				android:prompt="@string/spinner_city_prompt"
+			/>
+		</LinearLayout>
+		
+		<Button android:id="@+id/button_pick_city"
+			android:text="Go!"			
+			android:textSize="20sp"
+			android:textStyle="bold"
+			android:height="60px"
+			android:width="75px" 
+			android:layout_marginTop="5px"
+			android:layout_marginRight="15px"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+		/>
+	</LinearLayout>
+ -->
+	
+<!-- 		
+ -->	
+</LinearLayout>
