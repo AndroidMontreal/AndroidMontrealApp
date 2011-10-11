@@ -6,4 +6,5 @@
     <string name="intermediate">Intermediate</string>
     <string name="expert">Expert</string>
     <string name="settingheader">Programming Skill Level</string>
+    <string name="menu_preferences">Preferences</string>
 </resources>

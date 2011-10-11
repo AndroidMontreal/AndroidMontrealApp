@@ -38,7 +38,7 @@
 			<Button android:id="@+id/home_btn_news" style="@style/HomeButton"
 				android:onClick="onNewsClick" android:drawableTop="@drawable/home_btn_starred" />
 			<Button android:id="@+id/home_btn_about" style="@style/HomeButton"
-				android:onClick="onAboutClick" android:drawableTop="@drawable/home_btn_starred" />
+				android:onClick="onAboutClick" android:drawableTop="@android:drawable/ic_menu_info_details" />
 
 		</TableRow>
 		<TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content"
