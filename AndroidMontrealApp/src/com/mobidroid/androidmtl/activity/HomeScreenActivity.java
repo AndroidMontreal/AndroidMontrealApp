@@ -73,7 +73,7 @@ public class HomeScreenActivity extends Activity {
 	/*
 	 * View events (calendar?)
 	 */
-	public void onEventClick(View v) {
+	public void onEventsClick(View v) {
 		startActivity(new Intent(this, HomeScreenActivity.class));
 	}
 
