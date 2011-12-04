@@ -22,14 +22,14 @@
 		<TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content"
 			android:layout_height="wrap_content">
 			<Button android:id="@+id/home_btn_suggest" style="@style/HomeButton"
-				android:onClick="onSuggestClick" android:drawableTop="@drawable/home_btn_starred" />
+				android:onClick="onSuggestClick" android:drawableTop="@drawable/home_btn_suggest" />
 			<Button android:id="@+id/home_btn_map" style="@style/HomeButton"
 				android:onClick="onMapClick" android:drawableTop="@drawable/home_btn_location" />
 		</TableRow>
 		<TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content"
 			android:layout_height="wrap_content">
 			<Button android:id="@+id/home_btn_contact" style="@style/HomeButton"
-				android:onClick="onContactClick" android:drawableTop="@drawable/home_btn_starred" />
+				android:onClick="onContactClick" android:drawableTop="@drawable/home_btn_mailing" />
 			<Button android:id="@+id/home_btn_events" style="@style/HomeButton"
 				android:onClick="onEventsClick" android:drawableTop="@drawable/home_btn_calendar" />
 		</TableRow>
