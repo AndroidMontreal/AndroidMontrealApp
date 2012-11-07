@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">com.androidmontreal.app</string>
+    <string name="title_page_detail">Page Detail</string>
+    <string name="title_page_list">Pages</string>
+    <string name="group_title">Android Montreal</string>
+    <string name="next_event_title">Next event</string>
+    <string name="dummyDateAndTime">31/01/12 18:30</string>
+    <string name="dummyLocation">51 Rue Sherbrooke Ouest, Montréal, QC, H2X 4C9 (Notman House)</string>
+
+</resources>

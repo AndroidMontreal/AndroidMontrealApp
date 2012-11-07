@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/appwidget_bg"
+    android:gravity="left|center"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/newsImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:src="@drawable/twitter" />
+   
+    <TextView
+        android:id="@+id/newsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus in ante pretium blandit. Aliquam erat volutpat. Nulla libero lectus."
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:autoLink="web"
+        android:linksClickable="true" />
+
+</LinearLayout>
