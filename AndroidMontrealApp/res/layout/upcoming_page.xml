@@ -1,0 +1,19 @@
+   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center|top"
+        android:orientation="vertical" >
+
+		<include layout="@layout/section_heading"/>        
+
+        <include
+            android:layout_height="136dp"
+            layout="@layout/event_display_abstract" />
+        
+        <include layout="@layout/section_heading"/>        
+
+        <include
+            android:layout_height="136dp"
+            layout="@layout/event_display_abstract" />
+        
+    </LinearLayout>
