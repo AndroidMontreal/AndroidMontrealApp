@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
+import android.view.View;
 
 import com.androidmontreal.app.R;
 import com.androidmontreal.app.content.PageContent;
@@ -35,6 +37,8 @@ public class PageListActivity extends FragmentActivity
     private boolean mTwoPane;
     
 	private int activePageId = -1;
+	
+	private static final String TAG = PageListActivity.class.getName();
     
     /* (non-Javadoc)
      * @see android.support.v4.app.FragmentActivity#onCreate(android.os.Bundle)
@@ -108,4 +112,29 @@ public class PageListActivity extends FragmentActivity
             startActivity(detailIntent);
         }
     }
+    
+    public void onSuggestClick(View view) {
+    	Log.d(TAG, "onSuggestClick invoked.  TODO: Implement this method!");
+    }
+    
+    public void onMapClick(View view) {
+    	Log.d(TAG, "onMapClick invoked.  TODO: Implement this method!");
+    }
+    
+    public void onContactClick(View view) {
+    	Log.d(TAG, "onContactClick invoked.  TODO: Implement this method!");
+    }
+    
+    public void onEventsClick(View view) {
+    	Log.d(TAG, "onEventsClick invoked.  TODO: Implement this method!");
+    }
+    
+    public void onNewsClick(View view) {
+    	Log.d(TAG, "onNewsClick invoked.  TODO: Implement this method!");
+    }
+    
+    public void onAboutClick(View view) {
+    	Log.d(TAG, "onAboutClick invoked.  TODO: Implement this method!");
+    }
+
 }

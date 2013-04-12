@@ -86,6 +86,17 @@ public class PageDetailFragment extends Fragment {
 		case PageContent.HOME_PAGE_ID:
 			loadHomePage();
 			break;
+		case PageContent.EVENT_PAGE_ID:
+			loadEventsPage();
+			break;
+		case PageContent.NEWS_PAGE_ID:
+//			TODO:  Implement this page
+//			loadNewsPage();
+			break;
+		case PageContent.PRESENT_PAGE_ID:
+//			TODO:  Implement this page
+//			loadPresentPage();
+			break;
 		case PageContent.ABOUT_PAGE_ID:
 			loadLocalWebPage("about-en.html");
 			break;
@@ -148,6 +159,13 @@ public class PageDetailFragment extends Fragment {
 
 		// Build a page...
 
+	}
+	
+	private void loadEventsPage() {
+		FrameLayout viewPlaceHolder = ((FrameLayout) rootView
+				.findViewById(R.id.mainContentPlaceHolder));
+		viewPlaceHolder.inflate(getActivity(), R.layout.event_display_abstract,
+				viewPlaceHolder);
 	}
 
 	@Override

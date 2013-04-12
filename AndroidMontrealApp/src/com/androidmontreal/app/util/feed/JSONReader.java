@@ -13,13 +13,18 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.util.Log;
 
 public class JSONReader {
 
+	public static final String GOOGLE_API_TAG_FEED = "feed";
+	
 	private static final String TAG = JSONReader.class.getName();
 	//private static final String FEED_SOURCE = "http://pipes.yahoo.com/pipes/pipe.run?_id=d2c6600b98b9934f090af6c76ec8ac36&_render=json";
+	
 	
 
 	public static JSONArray readFeed(String url) {
@@ -35,6 +40,38 @@ public class JSONReader {
 		
 		return null;
 	}
+
+	public static JSONObject readGoogleCalendarFeed(String url) {
+
+		String rawJsonFeed = readJsonFeed(url);
+
+		try {
+			Log.d( TAG, "About to attempt JSON parse: " );
+			JSONObject rawJsonObject = new JSONObject(rawJsonFeed);
+			JSONObject googleCalendarFeed = rawJsonObject.getJSONObject(GOOGLE_API_TAG_FEED);
+			
+//			Log.d( TAG, "result: " + googleCalendarFeed.toString() );
+			return googleCalendarFeed;		
+
+		} catch (JSONException ex) {
+			StackTraceElement[] stackTrace = ex.getStackTrace();
+			String message = ex.getMessage();
+			Log.e( TAG, "getMessage: " + message );
+			// note "Verbose" Log level in next few lines, then back to "Error" for the stacktrace.  JSON messages are too damn long!
+			Log.v( TAG, " " );
+			Log.v( TAG, "Final 200 chars of above Error Message:" );
+			Log.v( TAG, ex.getLocalizedMessage().substring(   message.length() - 200   ) );
+			
+			for (int i=0; i<stackTrace.length; i++) {
+				Log.e( TAG, "  " + stackTrace[i].toString() );
+			}
+			
+		}
+
+		return null;
+
+	}
+	
 
 	public static String readJsonFeed(String url) {
 		StringBuilder builder = new StringBuilder();
