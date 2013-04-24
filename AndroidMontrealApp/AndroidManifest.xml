@@ -5,6 +5,7 @@
         
     <!-- Used for all web service call and webview -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
       
     <!-- Used to write file on disk (custom web cache) -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -20,7 +21,7 @@
         android:theme="@style/AppTheme" 
         android:name=".AndroidMontrealApp">
                 
-        <!-- The main activity is the PageListActivity, uppon start we display
+        <!-- The main activity is the PageListActivity, upon start we display
         the list of available content OR if the device is "large or more" we display
         a two pane view -->
         

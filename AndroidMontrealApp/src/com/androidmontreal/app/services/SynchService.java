@@ -1,8 +1,11 @@
 package com.androidmontreal.app.services;
 
 import android.app.IntentService;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences.Editor;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
@@ -21,8 +24,10 @@ public class SynchService extends IntentService {
 	private static final String TAG = SynchService.class.getName();
 		
 	String API_KEY = "AIzaSyCm45dmJ9surAmFlEelLHG87VOM5hu7xNw";
-	String BASE_URL = "https://www.googleapis.com/calendar/v3/";
-	String GET_EVENTS = BASE_URL + "androidmontreal.com@gmail.com/acl";
+
+	/** Below constants no longer needed:  Calendar events brought in with LoaderManager instead */
+//	String BASE_URL = "https://www.googleapis.com/calendar/v3/";
+//	String GET_EVENTS = BASE_URL + "androidmontreal.com@gmail.com/acl";
 	
 	private static final String TWITTER_FEED_SOURCE = "http://twitter.com/statuses/user_timeline/androidmontreal.json";
 	
@@ -41,8 +46,15 @@ public class SynchService extends IntentService {
 	@Override
 	protected void onHandleIntent(Intent intent) {
 				
-		boolean internetAvailable = true;
-							
+		boolean internetAvailable = false;
+				
+		ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+		if (networkInfo != null && networkInfo.isConnected()) {
+			internetAvailable = true;
+			Log.v(TAG, "Internet connection found");
+		} 
+		
 		if(internetAvailable){
 			
 			// TODO Fetch static page version

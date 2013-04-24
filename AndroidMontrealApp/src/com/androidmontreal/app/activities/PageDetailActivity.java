@@ -5,8 +5,9 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.NavUtils;
+import android.util.Log;
 import android.view.MenuItem;
-
+ 
 import com.androidmontreal.app.R;
 import com.androidmontreal.app.content.PageContent;
 import com.androidmontreal.app.fragments.PageDetailFragment;
@@ -27,6 +28,8 @@ import com.androidmontreal.app.fragments.PageDetailFragment;
  */
 public class PageDetailActivity extends FragmentActivity {
 
+	private static final String TAG = PageDetailActivity.class.getName();
+	
     private PageDetailFragment mDetailfragment;
 
 	@Override
@@ -75,5 +78,5 @@ public class PageDetailActivity extends FragmentActivity {
     	super.onSaveInstanceState(outState);    	
     	getSupportFragmentManager().putFragment(outState, PageDetailFragment.class.getName(), mDetailfragment);
     }
-    
+
 }

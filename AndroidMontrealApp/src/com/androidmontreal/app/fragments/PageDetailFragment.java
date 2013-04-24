@@ -2,6 +2,8 @@ package com.androidmontreal.app.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -162,10 +164,13 @@ public class PageDetailFragment extends Fragment {
 	}
 	
 	private void loadEventsPage() {
-		FrameLayout viewPlaceHolder = ((FrameLayout) rootView
-				.findViewById(R.id.mainContentPlaceHolder));
-		viewPlaceHolder.inflate(getActivity(), R.layout.event_display_abstract,
-				viewPlaceHolder);
+		
+		FragmentManager fragmentManager = getFragmentManager();
+		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+		EventsPageFragment newFrag = new EventsPageFragment();
+		fragmentTransaction.add(R.id.mainContentPlaceHolder, newFrag);
+		fragmentTransaction.commit();
+		
 	}
 
 	@Override

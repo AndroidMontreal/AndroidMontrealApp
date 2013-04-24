@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="@string/events_page_title"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/event_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/When_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="When:" />
+
+        <TextView
+            android:id="@+id/event_date"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/When_Text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/event_start"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/event_date"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/To_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/event_start"
+            android:text="to" />
+
+        <TextView
+            android:id="@+id/event_end"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/To_Text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Where_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/When_Text"
+            android:text="Where:" />
+
+        <TextView
+            android:id="@+id/event_where"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/When_Text"
+            android:layout_toRightOf="@+id/Where_Text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/event_content"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/Where_Text" />
+    </RelativeLayout>
+
+</LinearLayout>
